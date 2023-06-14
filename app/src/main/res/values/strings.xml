@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Constraint Layout</string>
+    <string name="tvSpace">Space Station</string>
+    <string name="tvRocket">Rocket</string>
+    <string name="tvRover">Rovers</string>
+    <string name="tvDca">DCA</string>
+    <string name="tvMars">MARS</string>
+    <string name="rbOver">Oneway</string>
+    <string name="tvTraveller">Traveller</string>
+</resources>

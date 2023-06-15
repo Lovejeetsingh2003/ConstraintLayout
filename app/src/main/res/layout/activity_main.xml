@@ -30,11 +30,26 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent=".95"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v_gl_40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".40"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v_gl_60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".60"/>
+
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
         android:id="@+id/imgSpace"
+        android:layout_width="107dp"
+        android:layout_height="94dp"
         android:src="@drawable/space"
+        app:layout_constraintEnd_toStartOf="@id/v_gl_40"
         app:layout_constraintStart_toStartOf="@id/v_gl_05"
         app:layout_constraintTop_toTopOf="@id/h_gl_5" />
     <ImageView
@@ -42,8 +57,8 @@
         android:layout_height="100dp"
         android:src="@drawable/rocket"
         android:id="@+id/imgRocket"
-        app:layout_constraintStart_toEndOf="@id/imgSpace"
-        app:layout_constraintEnd_toStartOf="@id/imgRovers"
+        app:layout_constraintStart_toEndOf="@id/v_gl_40"
+        app:layout_constraintEnd_toStartOf="@id/v_gl_60"
         app:layout_constraintTop_toTopOf="@id/h_gl_5" />
     <ImageView
         android:layout_width="100dp"
@@ -51,7 +66,8 @@
         android:id="@+id/imgRovers"
         android:src="@drawable/rovers"
         app:layout_constraintTop_toTopOf="@id/h_gl_5"
-        app:layout_constraintEnd_toEndOf="@id/v_gl_95" />
+        app:layout_constraintEnd_toEndOf="@id/v_gl_95"
+        app:layout_constraintStart_toEndOf="@id/v_gl_60"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -60,32 +76,32 @@
         android:text="@string/tvSpace"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="@id/v_gl_05"
-        app:layout_constraintTop_toBottomOf="@id/imgSpace"/>
+        app:layout_constraintTop_toBottomOf="@id/imgSpace"
+        app:layout_constraintEnd_toStartOf="@id/v_gl_40"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tvRocket"
         android:text="@string/tvRocket"
         android:textColor="@color/white"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintStart_toEndOf="@id/tvSpace"
+        app:layout_constraintStart_toEndOf="@id/v_gl_40"
         app:layout_constraintTop_toBottomOf="@id/imgRocket"
-        app:layout_constraintEnd_toStartOf="@id/tvRovers"/>
+        app:layout_constraintEnd_toStartOf="@id/v_gl_60"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tvRovers"
         android:text="@string/tvRover"
-        android:layout_marginEnd="30dp"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@id/v_gl_95"
-        app:layout_constraintTop_toBottomOf="@id/imgRovers"/>
+        app:layout_constraintTop_toBottomOf="@id/imgRovers"
+        app:layout_constraintStart_toEndOf="@id/v_gl_60"/>
 
     <TextView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:gravity="center_vertical"
-        android:paddingStart="10dp"
+        android:paddingStart="40dp"
         android:id="@+id/tvDca"
         android:text="@string/tvDca"
         android:textColor="@color/black"
@@ -97,15 +113,15 @@
         app:layout_constraintTop_toTopOf="@id/h_gl_5"
         app:layout_constraintBottom_toBottomOf="@id/h_gl_85" />
     <TextView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:gravity="center_vertical"
-        android:paddingStart="50dp"
+        android:paddingStart="70dp"
         android:id="@+id/tvMars"
         android:text="@string/tvMars"
         android:textColor="@color/black"
         android:background="@color/purple"
-        android:textSize="17sp"
+        android:textSize="20sp"
         android:fontFamily="sans-serif-black"
         app:layout_constraintStart_toEndOf="@id/tvDca"
         app:layout_constraintEnd_toEndOf="@id/v_gl_95"
@@ -116,8 +132,8 @@
         android:layout_height="70dp"
         android:id="@+id/imgReverse"
         android:src="@drawable/reverse"
-        app:layout_constraintStart_toStartOf="@id/v_gl_05"
-        app:layout_constraintEnd_toEndOf="@id/v_gl_95"
+        app:layout_constraintStart_toStartOf="@id/v_gl_40"
+        app:layout_constraintEnd_toEndOf="@id/v_gl_60"
         app:layout_constraintTop_toTopOf="@id/h_gl_5"
         app:layout_constraintBottom_toBottomOf="@id/h_gl_85" />
     <RadioButton

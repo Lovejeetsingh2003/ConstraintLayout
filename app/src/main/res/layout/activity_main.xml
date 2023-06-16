@@ -220,6 +220,7 @@
         android:id="@+id/imgReverse"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:scaleType="fitXY"
         android:src="@drawable/reverse"
         app:layout_constraintBottom_toBottomOf="@id/h_gl_55"
         app:layout_constraintEnd_toEndOf="@id/v_gl_65"
